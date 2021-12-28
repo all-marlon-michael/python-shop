@@ -1,0 +1,18 @@
+{%extends "layout.html"%}
+
+{%block content%}
+<div class=".container my-5">
+    {%from "_formhelper.html" import render_field%}
+    <div class="text-center h1 my-5">sign up</div>
+    <div class='center'>
+        <form class="my-5"method="post" enctype="multipart/form-data" style='width: 30%;'>
+            {{ render_field(form.username, class="form-control") }}
+            {{ render_field(form.email, class="form-control") }}
+            {{ render_field(form.password, class="form-control") }}
+            {{ render_field(form.confirm, class="form-control") }}
+            <p><input class="btn btn-info" type=submit value="Sign up">
+    </form>
+    </div>
+</div>
+
+{%endblock content%}
